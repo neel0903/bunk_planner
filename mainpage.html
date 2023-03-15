@@ -80,7 +80,8 @@
         // Calculate the attendance percentage and the attendance needed
         const futureTotalLecture =(currentTotalLecture + totalLectureInWeek);
         const futurePresentLecture = futureTotalLecture * (aimAttendance/100);
-        const attendLecture = Math.ceil(futurePresentLecture - currentAttendance);
+        const presentTotalLecture = (currentTotalLecture * (currentAttendance/100))
+        const attendLecture = Math.ceil(futurePresentLecture - presentTotalLecture);
         const neededLecture = attendLecture > 0 ? attendLecture : 0;
         
         
