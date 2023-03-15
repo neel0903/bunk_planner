@@ -91,18 +91,19 @@
         const innerContainer = document.querySelector(".innercontainer");
 
         // Display the result in the div element based on the attendance needed
+        // Display the result in the div element based on the attendance needed
         if ( attendLecture <= totalLectureInWeek) {
           if (attendLecture > 0){
-            resultDiv.innerHTML = `You need to attend ${neededLecture} more lectures to reach your ${aimAttendance} attendance.`;
+            resultDiv.innerHTML = `You need to attend ${neededLecture} lectures out of ${totalLectureInWeek} lectures to maintain ${aimAttendance} % attendance.`;
             innerContainer.style.backgroundColor = "#7da9f0"; // Change background color to light blue
           }
           else{
-            resultDiv.innerHTML = "Enjoy your bunk! You have already achieved your aim attendance.";
+            resultDiv.innerHTML = "Enjoy you week you don't want to attend any lecture";
             innerContainer.style.backgroundColor = "#76f576"; // Change background color to light green
           }
         }
         else{
-          resultDiv.innerHTML = "Sorry you can't achive your aim attendance";
+          resultDiv.innerHTML = "Sorry you can't achive your ${aimAttendance} % ";
           innerContainer.style.backgroundColor = "#f54242"; // Change background color to light red
         }
 
